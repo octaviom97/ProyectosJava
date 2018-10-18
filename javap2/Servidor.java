@@ -1,3 +1,6 @@
+// 8  Montiel Martínez Luis Javier
+// 10 Martínez Osorio Octavio
+
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.InputStreamReader;

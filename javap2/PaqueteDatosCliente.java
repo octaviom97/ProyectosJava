@@ -1,4 +1,6 @@
-
+// 8  Montiel Martínez Luis Javier
+// 10 Martínez Osorio Octavio 
+ 
 import java.io.Serializable;
 
 public class PaqueteDatosCliente implements Serializable{ //esta interfaz permite el envio de los atributos de un obj de esta clase ya instanciado

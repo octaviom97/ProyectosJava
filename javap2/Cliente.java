@@ -1,3 +1,6 @@
+// 8  Montiel Martínez Luis Javier
+// 10 Martínez Osorio Octavio
+
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -69,7 +72,8 @@ public class Cliente{
 	String v = "";
     int control = 0;
 	
-    ArrayList<String> IpsMenu = new ArrayList<String>();
+    ArrayList<String> ipsMenu = new ArrayList<String>();
+    ArrayList<String> nickMenu = new ArrayList<String>();
 
     System.out.println("\tEntraste al servidor");
     System.out.println("Añadete al chat con el comando 'add'.");
@@ -79,7 +83,9 @@ public class Cliente{
 
         System.out.println("Usuario añadido");
         cliente.enviar(cliente.getMiIp());
+        ipsMenu.add(cliente.getMiIp());
         cliente.enviar(cliente.getNick());
+        nickMenu.add(cliente.getNick());
         do{
         System.out.print("Escribe tu comando: ");
           str = teclado.readLine();
@@ -93,15 +99,15 @@ public class Cliente{
 
           } else if (str.equals("list")){
             System.out.println("Lista de usuarios:");
-            System.out.println(IpsMenu);
+            System.out.println(nickMenu);
+            System.out.println(ipsMenu);
             
 
           } else if (str.equals("send_file")){
             System.out.println("Enviar archivo");
 
           } else{System.out.println("Comando incorrecto");}
-			v=entrada.readLine();
-			System.out.print(v);
+			
 			
         } while(!str.equals("quit"));
         cliente.cerrar();
